@@ -1,24 +1,27 @@
 server:
   port: 12100
 
+# Correct management configuration
 management:
+  # Global settings for all endpoints
   endpoints:
     web:
       exposure:
         include: "*"
 
-  endpoints:
+  # Settings for individual endpoints
+  endpoint:
     health:
-      enabled: true
       show-details: always
+      enabled: true
     beans:
       enabled: true
     info:
       enabled: true
-    server:
-      address: localhost
-      port: 12100
 
-
+  # (Optional) If you want to run management on a different port/address
+  # server:
+  #   address: localhost
+  #   port: 12101
 
 poly: 'BigData Dev'
